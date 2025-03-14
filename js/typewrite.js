@@ -9,8 +9,12 @@ let typeWrite = function(el, toRotate, period) {
 };
 
 typeWrite.prototype.tick = function() {
-  const selectedFontColor = localStorage.getItem('target-font-color');
+  var selectedFontColor = localStorage.getItem('target-font-color');
   const selectedFontStyle = localStorage.getItem('target-font-style');
+
+  if (selectedFontColor === null) {
+    selectedFontColor = 'text-basic';
+  }
 
   let i = this.loopNum % this.toRotate.length;
   let fullTxt = this.toRotate[i];
