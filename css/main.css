@@ -20,7 +20,7 @@
 }
 
 .text-basic {
-  color: #FFF !important;
+  color: #eee !important;
   text-shadow: 0.5px 0.5px #666 !important;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .bg-basic {
-  background-color: var(--background-color-white) !important;
+  background-color: #ccc !important;
 }
 
 .text-primary {

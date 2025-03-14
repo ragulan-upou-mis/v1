@@ -404,6 +404,24 @@ footer div ul li a:hover {
   animation-range: 200px 600px;
 }
 
+#info {
+  position: fixed;
+  z-index: 100000 !important;
+  left:0;
+  bottom: 0;
+  margin: 10px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+code {
+  background-color: #FFF;
+  padding: 0 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: rgba(255, 87, 51, 1);
+}
 
 
 @keyframes slideFromTop {

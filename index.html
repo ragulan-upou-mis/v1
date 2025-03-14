@@ -20,18 +20,20 @@
     <div class="navbar__container container">
       <a href="#" class="navbar__logo target-font-color target-font-style">RG</a>
       <ul class="navbar__links">
+        <li class="navbar__links-item"><a class="target-font-color target-font-style" href="https://ragulan-upou-mis.github.io/ragulan-upou-mis-v2.github.io/">Simple <code><small>v1</small></code></a></li>
+        <li class="navbar__links-item"><a class="target-font-color target-font-style" href="https://ragulan-upou-mis.github.io/">Playful <code><small>v2</small></code></a></li>
         <li class="navbar__links-item"><a class="target-font-color target-font-style" href="#hobbies-title">Hobbies &amp; Interests</a></li>
         <li class="navbar__links-item"><a class="target-font-color target-font-style" href="#contact">Contact</a></li>
       </ul>
       <ul class="actions">
-        <li>
+        <li id="edit-button">
           <input type="checkbox" id="toggle" class="toggleCheckbox" />
           <label for="toggle" class="toggleContainer">
             <div></div> 
             <div class="target-font-style">Edit Mode</div>
           </label>
         </li>
-        <li>
+        <li id="reset-button">
           <a class="target-font-color reset" href="#">
             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="25" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
@@ -54,6 +56,8 @@
 <aside class="mobile__menu center glass-morphism">
     <nav class="mobile__nav">
       <ul class="mobile__links">
+        <li class="navbar__links-item"><a class="target-font-color target-font-style" href="https://ragulan-upou-mis.github.io/ragulan-upou-mis-v2.github.io/">Simple <code><small>v1</small></code></a></li>
+        <li class="navbar__links-item"><a class="target-font-color target-font-style" href="https://ragulan-upou-mis.github.io/">Playful <code><small>v2</small></code></a></li>
         <li class="navbar__links-item"><a class="target-font-color target-font-style" href="#hobbies-title">Hobbies &amp; Interests</a></li>
         <li class="mobile__links-item"><a class="target-font-color target-font-style" href="#contact">Contact</a></li>
       </ul>
@@ -171,9 +175,15 @@
   </div>
 </footer>
 
-<a href="#home" id="top">
+<a href="#home" class="glass-morphism" id="top">
   <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+  </svg>
+</a>
+<a href="javascript:void(0)" class="glass-morphism" id="info" onclick="toggleModal('info-value')">
+  <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
   </svg>
 </a>
 
@@ -288,6 +298,43 @@
       <b>Fun Fact!</b> We hate planned travels. We don't plan anything 'coz, for us, planned travels are always not happening. 
       For example, we want to go somewhere, we invite each other at 8 o'clock in the evening, we take off at 4am the next day. That's what I love in our circle. Unplanned but always the best.
     </p>
+  </section>
+
+  <section id="info-value">
+    <center>
+      <h3>Some information in this page that you should know!</h3>
+    </center>
+    <br />
+    <div class="fun-fact">
+      This page utilizes javascript's <code>window.localStorage</code> object, which basically save values in your browser.
+      This means any updates you will make using <code>Edit Mode</code> button will remain, even when you reload the page, until you click the
+      <code>Reset</code> 
+      button.
+    </div>
+
+    <br />
+    <div class="fun-fact">
+        <center>
+          <ul id="edit-button-container" class="actions"></ul>
+          <br />
+          <p>
+            This <code>Edit Mode</code> button, which you can see on the navbar, allows you to change few things in this 
+            page such as background color, text color, and typography.
+          </p>
+        </center>
+      </div>
+    </div> 
+    <br />
+    <div class="fun-fact">
+      <center>
+        <p class="reset-button-container" class="actions"></p>
+        <br />
+        <p>
+          This is the <code>Reset</code> button. Clicking this will clear the values stored in the <code>window.localStorage</code> object
+          which will reset the page to its default settings.
+        </p>
+      </center>
+    </div>
   </section>
 </section>
 
