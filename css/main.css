@@ -20,8 +20,8 @@
 }
 
 .text-basic {
-  color: #eee !important;
-  text-shadow: 0.5px 0.5px #666 !important;
+  color: #FFF !important;
+  text-shadow: 0.5px 0 #aaa !important;
 }
 
 .text-dark {
@@ -31,14 +31,16 @@
 
 .bg-dark {
   background-color: #444 !important;
+  background-blend-mode: color-burn;
 }
 
 .bg-basic {
-  background-color: #ccc !important;
+  background-color: #fff !important;
 }
 
 .text-primary {
   color: var(--primary) !important;
+  text-shadow: 1px 0 #666;
 }
 
 .bg-primary {
@@ -47,6 +49,7 @@
 
 .text-secondary {
   color: var(--secondary) !important;
+  text-shadow: 0.5px 0 #666 !important;
 }
 
 .bg-secondary {
@@ -55,20 +58,16 @@
 
 .text-tertiary {
   color: var(--tertiary) !important;
+  text-shadow: 0.5px 0 #FFF !important;
 }
 
 .bg-tertiary {
   background-color: var(--tertiary) !important;
 }
 
-.text-quaternary {
-  color: var(--quaternary) !important;
+.bg-basic, .bg-primary, .bg-secondary, .bg-tertiary{
+  background-blend-mode: luminosity !important;
 }
-
-.bg-quaternary {
-  background-color: var(--quaternary) !important;
-}
-
 
 *,
 *::before,
