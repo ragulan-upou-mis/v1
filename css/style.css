@@ -1,14 +1,14 @@
 
 
+body, .inner-container {
+  transition: 0.5s;
+}
+
 body {
   background: url('../images/grey.jpg') center no-repeat fixed;
   background-size: cover;
   background-blend-mode: color-burn;
   background-color: #aaa;
-}
-
-.main {
-  padding: 50px;
 }
 
 header {
@@ -24,7 +24,7 @@ header {
   box-shadow: 0 8px 32px 0 rgba( 255, 255, 255, 0.37 );
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
-  border-radius: 20px;
+  /* border-radius: 20px; */
   animation: fadeIn 1s 1s forwards;
   opacity: 0;
   background: url('../images/technology2.jpg') center no-repeat;
@@ -37,7 +37,7 @@ header {
 
 .wrap {
   font-weight: bold !important;
-  border-bottom: 2px solid #666;
+  border-bottom: 5px solid var(--primary-color);
   border-right: 0.1em solid #fff;
 }
 
@@ -52,10 +52,17 @@ header {
   width: 50%;
 }
 
+.inner-container section:first-child ul li {
+  transition: 0.5s;
+}
 
 .inner-container section:first-child ul li:first-child {
   padding-left: 10px;
   font-size: 25px;
+}
+
+.inner-container section:first-child ul li:nth-child(1):hover {
+  font-size: 30px;
 }
 
 .inner-container section:first-child ul li:nth-child(2) {
@@ -63,9 +70,18 @@ header {
   font-size: 35px;
 }
 
+.inner-container section:first-child ul li:nth-child(2):hover {
+  font-size: 40px;
+}
+
 .inner-container section:first-child ul li:nth-child(3) {
   font-size: 30px;
 }
+
+.inner-container section:first-child ul li:nth-child(3):hover {
+  font-size: 35px;
+}
+
 
 .inner-container section:first-child ul li:nth-child(2) {
   font-size: 30px;
@@ -97,6 +113,19 @@ header {
   text-align: center;
 }
 
+.inner-container section:nth-child(3) ul li:nth-child(even) img {
+  rotate: -15deg;
+}
+
+.inner-container section:nth-child(3) ul li:nth-child(odd) img {
+  rotate: 15deg;
+}
+
+.inner-container section:nth-child(3) ul li img {
+  transition: 1s;
+  background-color: var(--primary-color);
+}
+
 .inner-container section:nth-child(3) ul li img {
   width: 20%;
   mix-blend-mode: color-burn !important;
@@ -104,6 +133,10 @@ header {
 
 .inner-container section:nth-child(3) ul li.hobbies a {
   transition: 0.5s;
+}
+
+.inner-container section:nth-child(3) ul li.hobbies a:hover > img {
+  rotate: 0deg;
 }
 
 .inner-container section:nth-child(3) ul li.hobbies a:hover {
@@ -120,13 +153,14 @@ header {
 }
 
 .inner-container section:first-child p:last-child {
-  font-size: 13px;
+  font-size: 15px;
   width:55%;
   margin:10px 50px 0 50px;
   padding:15px;
   text-align: justify;
   opacity: 0;
   transform: translateY(30%);
+  background-color: var(--primary-color);
   animation: slideFromBottom 1s 2s forwards;
 }
 
@@ -168,7 +202,7 @@ header {
   bottom: 0;
   text-align: center;
   opacity: 0;
-  width: 35%;
+  width: 30%;
   max-width: 100%;
   animation: imgFadeIn 1s 1s forwards;
 }
@@ -337,6 +371,7 @@ header {
   line-height: 1;
   padding:0;
   margin:0;
+  margin-top: 50px;
   z-index: -1 !important;
 }
 
